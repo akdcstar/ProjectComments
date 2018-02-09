@@ -28,6 +28,8 @@ public class App {
     private static void go(Teacher someone) {
         System.out.println(String.format("There is %s in the room also.", someone.name()));
         someone.teach();
+
+
     }
 
 }
