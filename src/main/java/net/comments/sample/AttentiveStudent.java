@@ -11,7 +11,7 @@ public class AttentiveStudent implements Student {
 
     public void learn(Subject someSubject) {
 
-        System.out.println(this.name + " is learning " + someSubject.getSubjectTitle());
+        System.out.println(this.name + " is learning how to " + someSubject.getSubjectTitle());
     }
 
     public String name() {

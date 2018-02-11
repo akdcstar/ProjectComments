@@ -1,6 +1,5 @@
 package net.comments.sample;
 
-
 public class TechTeacher implements Teacher {
     private final String name;
 

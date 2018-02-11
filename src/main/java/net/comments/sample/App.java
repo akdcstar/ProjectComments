@@ -7,7 +7,7 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
 
-        // Students
+        ///// Students
         List<Student> studentsList = new ArrayList<Student>();
 
         Student student_1 = new AttentiveStudent("Andrey");
@@ -18,7 +18,7 @@ public class App {
         studentsList.add(student_2);
         studentsList.add(student_3);
 
-        // Teachers
+        ///// Teachers
 
         List<Teacher> teachersList = new ArrayList<Teacher>();
 
@@ -28,13 +28,15 @@ public class App {
         teachersList.add(teacher_1);
         teachersList.add(teacher_2);
 
-        // Rooms
+        ///// Rooms
 
         List<Room> roomsList = new ArrayList<Room>();
 
-        Room room_1 = new TrainingRoom();
+        Room room_1 = new CookingRoom();
+        Room room_2 = new TrainingRoom();
 
         roomsList.add(room_1);
+        roomsList.add(room_2);
 
         // Subjects
 
@@ -47,47 +49,52 @@ public class App {
         subjectsList.add(subject_2);
 
 
-        // Call methods
+        ///// Call methods
 
-//        int i = 0;
+//        int i;
 //        do {
 //            go(studentsList.get(i));
 //            i = i+1;
 //        }
 //        while(i == studentsList.size());
 
+        System.out.println("Go_student results:***********");
+        go_student(student_1, subject_2);
+        go_student(student_2, subject_1);
+        go_student(student_3, subject_2);
+        System.out.println();
 
-        for (int i = 0; i < studentsList.size(); i++) {
+        System.out.println("Go_room results:***********");
+        go_room_teacher(room_1, teacher_1);
+        go_room_teacher(room_2, teacher_2);
+        System.out.println();
 
-            go(studentsList.get(i), subject_1);
-        }
-
-        for (int i = 0; i < teachersList.size(); i++) {
-            go(teachersList.get(i), subjectsList.get(i));
-        }
-
-        int i = 0;
-        roomsList.get(i).accept(teachersList.get(i));
+        System.out.println("Go_teacher results:***********");
+        go_teacher(teacher_1, subject_1);
+        go_teacher(teacher_2, subject_2);
         System.out.println();
 
 
-//        teacher_1.teach(subject_1);
-//        teacher_2.teach(subject_2);
+
 
     }
 
-    private static void go(Student someOne, Subject someSubject) {
-        System.out.println(String.format("There is %s in the room!", someOne.name()));
-        someOne.learn(someSubject);
-        System.out.println("");
+    private static void go_student(Student someStudent, Subject someSubject) {
+        System.out.println(String.format("There is %s in the room.", someStudent.name()));
+        someStudent.learn(someSubject);
+        System.out.println();
     }
 
-    private static void go(Teacher someOne, Subject someSubject) {
-        System.out.println(String.format("There is %s in the room also.", someOne.name()));
-        someOne.teach(someSubject);
-        System.out.println("");
+    private static void go_room_teacher(Room someRoom, Teacher somePerson) {
+        //System.out.println(String.format("Room contains %s", somePerson.accept()));
+        someRoom.accept(somePerson);
+        System.out.println();
+    }
 
-
+    private static void go_teacher(Teacher someTeacher, Subject someSubject) {
+        System.out.println(String.format("There is %s in the room.", someTeacher.name()));
+        someTeacher.teach(someSubject);
+        System.out.println();
     }
 
 }

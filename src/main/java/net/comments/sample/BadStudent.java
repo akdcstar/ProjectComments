@@ -11,7 +11,7 @@ public class BadStudent implements Student {
 
     public void learn(Subject someSubject) {
 
-        System.out.println(this.name + " is sleeping and does not learn " + someSubject.getSubjectTitle());
+        System.out.println(this.name + " is sleeping and does not learn how to " + someSubject.getSubjectTitle());
     }
 
     public String name() {
