@@ -38,83 +38,56 @@ public class App {
 
         // Subjects
 
-        Subject subject_1 = new SubjectName("Bake a Cake");
-        //teacher_1.teach(subject_1);
+        List<Subject> subjectsList = new ArrayList<Subject>();
 
+        Subject subject_1 = new SubjectName("Bake a Cake");
         Subject subject_2 = new SubjectName("Use Git");
-        //teacher_2.teach(subject_2);
+
+        subjectsList.add(subject_1);
+        subjectsList.add(subject_2);
 
 
         // Call methods
 
+//        int i = 0;
+//        do {
+//            go(studentsList.get(i));
+//            i = i+1;
+//        }
+//        while(i == studentsList.size());
+
+
         for (int i = 0; i < studentsList.size(); i++) {
 
-            go(studentsList.get(i));
+            go(studentsList.get(i), subject_1);
         }
 
         for (int i = 0; i < teachersList.size(); i++) {
-            go(teachersList.get(i), subject_1);
+            go(teachersList.get(i), subjectsList.get(i));
         }
 
         int i = 0;
         roomsList.get(i).accept(teachersList.get(i));
-
-        teacher_1.teach(subject_1);
-        teacher_2.teach(subject_2);
+        System.out.println();
 
 
+//        teacher_1.teach(subject_1);
+//        teacher_2.teach(subject_2);
 
     }
 
-    private static void go(Student someone) {
-        System.out.println(String.format("There is %s in the room!", someone.name()));
-        someone.learn();
+    private static void go(Student someOne, Subject someSubject) {
+        System.out.println(String.format("There is %s in the room!", someOne.name()));
+        someOne.learn(someSubject);
         System.out.println("");
     }
 
-    private static void go(Teacher someone, Subject someSubject) {
-        System.out.println(String.format("There is %s in the room also.", someone.name()));
-        someone.teach(someSubject);
+    private static void go(Teacher someOne, Subject someSubject) {
+        System.out.println(String.format("There is %s in the room also.", someOne.name()));
+        someOne.teach(someSubject);
         System.out.println("");
 
 
     }
 
 }
-//* Previous implementations without arrays
-//
-//package net.comments.sample;
-//
-//
-//public class App {
-//    public static void main(String[] args) {
-//        Student andrey = new AttentiveStudent("Andrey");
-//        Student nastya = new AttentiveStudent("Nastya");
-//        Student dima = new BadStudent("Dima");
-//
-//        Teacher vasya = new TeacherOne("Vasya");
-//
-//        Room roomOne = new TrainingRoom();
-//
-//        go(andrey);
-//        go(nastya);
-//        go(dima);
-//
-//        go(vasya);
-//
-//        roomOne.accept(andrey);
-//
-//    }
-//
-//    private static void go(Student someone) {
-//        System.out.println(String.format("There is %s in the room!", someone.name()));
-//        someone.learn();
-//    }
-//    private static void go(Teacher someone) {
-//        System.out.println(String.format("There is %s in the room also.", someone.name()));
-//        someone.teach();
-//
-//
-//    }
-//
-//}

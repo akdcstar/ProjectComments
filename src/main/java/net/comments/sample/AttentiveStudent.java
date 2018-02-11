@@ -9,9 +9,9 @@ public class AttentiveStudent implements Student {
         this.name = name;
     }
 
-    public void learn() {
+    public void learn(Subject someSubject) {
 
-        System.out.println(this.name + " is listening...");
+        System.out.println(this.name + " is learning " + someSubject.getSubjectTitle());
     }
 
     public String name() {

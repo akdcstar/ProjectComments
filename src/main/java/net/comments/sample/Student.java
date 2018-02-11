@@ -3,5 +3,5 @@ package net.comments.sample;
 
 public interface Student extends Person {
 
-    void learn();
+    void learn(Subject someSubject);
 }
