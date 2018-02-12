@@ -26,7 +26,7 @@ public class App {
         ///// Rooms
 
         Room room_1 = new CookingRoom();
-        Room room_2 = new TrainingRoom(2, "Training Room 111");
+        Room room_2 = new TrainingRoom(3, "Training Room 111");
 
 
         // Subjects
@@ -43,18 +43,18 @@ public class App {
         go_student(student_3, subject_2);
         System.out.println();
 
-        System.out.println("Go_room results:***********");
-        go_room(room_2, student_1);
-        go_room(room_2, student_2);
-        go_room(room_2, student_3);
-        go_room(room_2, teacher_1);
-        go_room(room_2, teacher_2);
-        System.out.println();
-
-        System.out.println("Go_teacher results:***********");
-        go_teacher(teacher_1, subject_1);
-        go_teacher(teacher_2, subject_2);
-        System.out.println();
+//        System.out.println("Go_room results:***********");
+//        go_room(room_2, student_1);
+//        go_room(room_2, student_2);
+//        go_room(room_2, student_3);
+//        go_room(room_2, teacher_1);
+//        go_room(room_2, teacher_2);
+//        System.out.println();
+//
+//        System.out.println("Go_teacher results:***********");
+//        go_teacher(teacher_1, subject_1);
+//        go_teacher(teacher_2, subject_2);
+//        System.out.println();
 
         //Temporary implementation
 
@@ -69,7 +69,7 @@ public class App {
             roomCapacity++;
 
         }
-
+        System.out.println();
         for (int i = 0; i < personsList.size(); i++) {
 
             if (roomCapacity < room_1.getRoomSize()) {
@@ -86,20 +86,35 @@ public class App {
 
     private static void go_student(Student someStudent, Subject someSubject) {
         System.out.println(String.format("There is %s in the room.", someStudent.name()));
-        someStudent.learn(someSubject);
-        System.out.println();
-    }
+        someSubject.learnBy(someStudent);
 
-    private static void go_room(Room someRoom, Person somePerson) {
-        //System.out.println(String.format("Room contains %s", somePerson.accept()));
-        someRoom.accept(somePerson);
         System.out.println();
     }
 
     private static void go_teacher(Teacher someTeacher, Subject someSubject) {
         System.out.println(String.format("There is %s in the room.", someTeacher.name()));
-        someTeacher.teach(someSubject);
+        someSubject.readBy(someTeacher);
+
         System.out.println();
     }
+//
+//    private static void go_student(Student someStudent, Subject someSubject) {
+//        System.out.println(String.format("There is %s in the room.", someStudent.name()));
+//        someStudent.learn(someSubject);
+//        System.out.println();
+//    }
+//
+//    private static void go_room(Room someRoom, Person somePerson) {
+//        //System.out.println(String.format("Room contains %s", somePerson.accept()));
+//        someRoom.accept(somePerson);
+//        System.out.println();
+//    }
+//
+//    private static void go_teacher(Teacher someTeacher, Subject someSubject) {
+//        System.out.println(String.format("There is %s in the room.", someTeacher.name()));
+//        someTeacher.teach(someSubject);
+//        System.out.println();
+//    }
+
 
 }
