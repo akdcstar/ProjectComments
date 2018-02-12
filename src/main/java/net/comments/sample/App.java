@@ -8,32 +8,27 @@ public class App {
     public static void main(String[] args) {
 
         ///// Students
-        List<Student> studentsList = new ArrayList<Student>();
+        List<Person> personsList = new ArrayList<Person>();
 
         Student student_1 = new AttentiveStudent("Andrey");
         Student student_2 = new AttentiveStudent("Nastya");
         Student student_3 = new BadStudent("Dima");
 
-        studentsList.add(student_1);
-        studentsList.add(student_2);
-        studentsList.add(student_3);
-
-        ///// Teachers
-
-        List<Teacher> teachersList = new ArrayList<Teacher>();
-
         Teacher teacher_1 = new TechTeacher("Dmitriy Sergeevich");
         Teacher teacher_2 = new TechTeacher("Aleksandr Vladimirovich");
 
-        teachersList.add(teacher_1);
-        teachersList.add(teacher_2);
+        personsList.add(student_1);
+        personsList.add(student_2);
+        personsList.add(student_3);
+        personsList.add(teacher_1);
+        personsList.add(teacher_2);
 
         ///// Rooms
 
-        List<Room> roomsList = new ArrayList<Room>();
+        List<Room> roomsList = new ArrayList();
 
         Room room_1 = new CookingRoom();
-        Room room_2 = new TrainingRoom();
+        Room room_2 = new TrainingRoom(2);
 
         roomsList.add(room_1);
         roomsList.add(room_2);
@@ -51,13 +46,6 @@ public class App {
 
         ///// Call methods
 
-//        int i;
-//        do {
-//            go(studentsList.get(i));
-//            i = i+1;
-//        }
-//        while(i == studentsList.size());
-
         System.out.println("Go_student results:***********");
         go_student(student_1, subject_2);
         go_student(student_2, subject_1);
@@ -65,8 +53,11 @@ public class App {
         System.out.println();
 
         System.out.println("Go_room results:***********");
-        go_room_teacher(room_1, teacher_1);
-        go_room_teacher(room_2, teacher_2);
+        go_room(room_2, student_1);
+        go_room(room_2, student_2);
+        go_room(room_2, student_3);
+        go_room(room_2, teacher_1);
+        go_room(room_2, teacher_2);
         System.out.println();
 
         System.out.println("Go_teacher results:***********");
@@ -85,7 +76,7 @@ public class App {
         System.out.println();
     }
 
-    private static void go_room_teacher(Room someRoom, Teacher somePerson) {
+    private static void go_room(Room someRoom, Person somePerson) {
         //System.out.println(String.format("Room contains %s", somePerson.accept()));
         someRoom.accept(somePerson);
         System.out.println();
