@@ -65,6 +65,21 @@ public class App {
         go_teacher(teacher_2, subject_2);
         System.out.println();
 
+//    Temporary implementation
+//
+//    int roomCapacity = 0;
+//        for (int i=0; i < personsList.size(); i++){
+//
+//            if(roomCapacity < room_2.getRoomSize()){
+//                System.out.println("All persons are in the room_2.");
+//            }
+//            else{
+//                System.out.println("Room is overloaded");
+//            }
+//            roomCapacity++;
+//
+//        }
+
 
 
 

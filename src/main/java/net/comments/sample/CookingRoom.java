@@ -7,4 +7,8 @@ public class CookingRoom implements Room {
         System.out.println(somePerson.name() + " went into the Cooking room.");
     }
 
+    public int getRoomSize() {
+        return 555;
+    }
+
 }
