@@ -25,23 +25,14 @@ public class App {
 
         ///// Rooms
 
-        List<Room> roomsList = new ArrayList();
-
         Room room_1 = new CookingRoom();
-        Room room_2 = new TrainingRoom(2);
+        Room room_2 = new TrainingRoom(2, "Training Room 111");
 
-        roomsList.add(room_1);
-        roomsList.add(room_2);
 
         // Subjects
 
-        List<Subject> subjectsList = new ArrayList<Subject>();
-
         Subject subject_1 = new SubjectName("Bake a Cake");
         Subject subject_2 = new SubjectName("Use Git");
-
-        subjectsList.add(subject_1);
-        subjectsList.add(subject_2);
 
 
         ///// Call methods
@@ -65,22 +56,30 @@ public class App {
         go_teacher(teacher_2, subject_2);
         System.out.println();
 
-//    Temporary implementation
-//
-//    int roomCapacity = 0;
-//        for (int i=0; i < personsList.size(); i++){
-//
-//            if(roomCapacity < room_2.getRoomSize()){
-//                System.out.println("All persons are in the room_2.");
-//            }
-//            else{
-//                System.out.println("Room is overloaded");
-//            }
-//            roomCapacity++;
-//
-//        }
+        //Temporary implementation
 
+        int roomCapacity = 0;
+        for (int i = 0; i < personsList.size(); i++) {
 
+            if (roomCapacity < room_2.getRoomSize()) {
+                System.out.println("There is " + (i + 1) + " persons in the room_2.");
+            } else {
+                System.out.println("There is no free places in the room_2.");
+            }
+            roomCapacity++;
+
+        }
+
+        for (int i = 0; i < personsList.size(); i++) {
+
+            if (roomCapacity < room_1.getRoomSize()) {
+                System.out.println("There is " + (i + 1) + " persons in the room_1.");
+            } else {
+                System.out.println("There is no free places in the room_1.");
+            }
+            roomCapacity++;
+
+        }
 
 
     }
