@@ -8,5 +8,18 @@
     <artifactId>comments</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
