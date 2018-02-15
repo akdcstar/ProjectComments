@@ -7,13 +7,11 @@ public class TechTeacher implements Teacher {
         this.name = name;
     }
 
-    public void teach(Subject someSubject) {
-
-        System.out.println(this.name + " is a teacher and he is teaching students how to " + someSubject.getSubjectTitle());
+    public void teach(Subject subjectName) {
+        System.out.println(this.name + " is a teacher and he is teaching students how to " + subjectName.getSubjectName());
     }
 
-    public String name() {
-
+    public String getName() {
         return this.name;
     }
 }
