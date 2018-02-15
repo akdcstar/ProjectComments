@@ -16,7 +16,8 @@ public class LimitedRoom implements Room {
             personList.add(somePerson);
             System.out.println(somePerson.getName() + " went into the room.");
         } else {
-            System.out.println(somePerson.getName() + " can't access the room, because there is no free places");
+            System.out.println(somePerson.getName() + " can't access the room.");
+            System.out.println("Sorry, " + somePerson.getName() + ", we can't accept you, because there is no free places in the room.");
         }
     }
 
