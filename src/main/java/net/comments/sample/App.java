@@ -25,19 +25,6 @@ public class App {
         TechTeacher sasha = new TechTeacher("Aleksandr Vladimirovich");
         TechTeacher denis = new TechTeacher("Denis Genadiyevich");
 
-//        List<Student> studentList = new ArrayList<Student>();
-//        studentList.add(andrey);
-//        studentList.add(nastya);
-//        studentList.add(lena);
-//        studentList.add(ivan);
-//        studentList.add(inna);
-//        studentList.add(anna);
-//        studentList.add(dima);
-
-
-//        List<Teacher> teacherList = new ArrayList<Teacher>();
-//        teacherList.add(sasha);
-//        teacherList.add(denis);
 
         List<Person> personList = new ArrayList<Person>();
         personList.add(denis);
@@ -52,12 +39,13 @@ public class App {
         personList.add(sasha);
 
 
-        System.out.println("Limited Room");
+        System.out.println("Limited Room accepts:");
         for (Person i : personList) {
             limitedRoom.accept(i);
         }
 
         System.out.println();
+        System.out.println("Students - Teachers in the Limited Room");
         for (Person i : limitedRoom.getPersonInRoom()) {
             if (i instanceof Student) {
                 go_student((Student) i, git);
@@ -65,12 +53,21 @@ public class App {
                 go_teacher((Teacher) i, git);
             }
         }
-//        System.out.println();
-//        System.out.println("Unlimited Room");
-//        for (Person i : personList) {
-//            unlimitedRoom.accept(i);
-//        }
 
+        System.out.println("Unlimited Room accepts:");
+        for (Person i : personList) {
+            unlimitedRoom.accept(i);
+        }
+
+        System.out.println();
+        System.out.println("Students - Teachers in the Unlimited Room");
+        for (Person i : unlimitedRoom.getPersonInRoom()) {
+            if (i instanceof Student) {
+                go_student((Student) i, cook);
+            } else if (i instanceof Teacher) {
+                go_teacher((Teacher) i, cook);
+            }
+        }
 
     }
 
