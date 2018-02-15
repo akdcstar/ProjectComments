@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LimitedRoom implements Room {
     private final int roomSize;
-    List<Person> personList = new ArrayList<Person>();
+    private List<Person> personList = new ArrayList<Person>();
 
     public LimitedRoom(int roomSize) {
         this.roomSize = roomSize;
@@ -18,5 +18,9 @@ public class LimitedRoom implements Room {
         } else {
             System.out.println(somePerson.getName() + " can't access the room, because there is no free places");
         }
+    }
+
+    public List<Person> getPersonInRoom() {
+        return this.personList;
     }
 }
