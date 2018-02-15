@@ -40,6 +40,7 @@ public class App {
 //        teacherList.add(denis);
 
         List<Person> personList = new ArrayList<Person>();
+        personList.add(denis);
         personList.add(andrey);
         personList.add(nastya);
         personList.add(lena);
@@ -49,54 +50,42 @@ public class App {
         personList.add(anna);
         personList.add(dima);
         personList.add(sasha);
-        personList.add(denis);
+
 
         System.out.println("Limited Room");
-        int i = 0;
-        for (i = 0; i < personList.size(); i++) {
-            limitedRoom.accept(personList.get(i));
+        for (Person i : personList) {
+            limitedRoom.accept(i);
         }
 
         System.out.println();
-        System.out.println("Unlimited Room");
-        for (i = 0; i < personList.size(); i++) {
-            unlimitedRoom.accept(personList.get(i));
+        for (Person i : limitedRoom.getPersonInRoom()) {
+            if (i instanceof Student) {
+                go_student((Student) i, git);
+            } else if (i instanceof Teacher) {
+                go_teacher((Teacher) i, git);
+            }
         }
-
-        System.out.println();
-        andrey.learn(git);
-        nastya.learn(git);
-        lena.learn(git);
-        olga.learn(git);
-        inna.learn(git);
-        anna.learn(git);
-        ivan.learn(git);
-        dima.learn(git);
-
-        System.out.println();
-        sasha.teach(git);
-        denis.teach(cook);
-
-
-
 //        System.out.println();
-//        go_student(andrey, git);
-//
-//        System.out.println();
-//        go_teacher(sasha, git);
+//        System.out.println("Unlimited Room");
+//        for (Person i : personList) {
+//            unlimitedRoom.accept(i);
+//        }
 
 
     }
-//    private static void go_student(NewStudent someStudent, NewSubject someSubject) {
-//        System.out.println(String.format("There is %s in the room.", someStudent.getNewName()));
-//        someStudent.newLearn(someSubject);
-//        System.out.println();
-//    }
-//
-//
-//    private static void go_teacher(NewTeacher someTeacher, NewSubject someSubject) {
-//        System.out.println(String.format("There is %s in the room.", someTeacher.getNewName()));
-//        someTeacher.newTeach(someSubject);
-//        System.out.println();
-//    }
+
+    private static void go_student(Student someStudent, Subject someSubject) {
+        System.out.println(String.format("There is %s in the room.", someStudent.getName()));
+        someStudent.learn(someSubject);
+        someSubject.learnBy(someStudent);
+        System.out.println();
+    }
+
+
+    private static void go_teacher(Teacher someTeacher, Subject someSubject) {
+        System.out.println(String.format("There is %s in the room.", someTeacher.getName()));
+        someTeacher.teach(someSubject);
+        someSubject.readBy(someTeacher);
+        System.out.println();
+    }
 }
