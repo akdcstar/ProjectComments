@@ -1,7 +1,5 @@
 package net.comments.sample;
 
-
 public interface Teacher extends Person {
-
-    void teach(Subject someSubject);
+    void teach(Subject subject);
 }
