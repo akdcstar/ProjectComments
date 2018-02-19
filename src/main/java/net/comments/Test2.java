@@ -25,7 +25,7 @@ public class Test2 {
         this.driver().findElement(By.xpath("//*[@id=\"editor-navigation\"]/input[2]")).click();
         this.driver().findElement(By.xpath("//*[@id=\"main\"]/div/div[5]/form/table/tfoot/tr/td/a[3]")).click();
         final String page = this.driver().getPageSource();
-        MatcherAssert.assertThat("New duplicated comment text is shown", page.contains("New Duplicated Comment"));
+        MatcherAssert.assertThat("New duplicated comment text is not shown", page.contains("New Duplicated Comment"));
         MatcherAssert.assertThat(this.driver().findElement(By.xpath("//*[@id=\"main\"]/div/div[5]/form/table/tbody/tr/td[2]")).getText(), Matchers.is("399"));
 
     }
