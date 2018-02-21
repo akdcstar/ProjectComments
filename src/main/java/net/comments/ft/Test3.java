@@ -1,4 +1,4 @@
-package net.comments;
+package net.comments.ft;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
