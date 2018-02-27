@@ -20,17 +20,19 @@ public class BCommentsPage implements CommentsPage {
 
     public CommentsActions commentsActions() {
         return new BCommentsActions(this.driver);
-//        throw new UnsupportedOperationException("Please implement");
     }
 
     public CommentsTable currentComments() {
-        return new BCommentsTable();
-//        throw new UnsupportedOperationException("Please implement");
+        return new BCommentsTable(driver);
     }
 
-    public CommentsTable commentsFrom(int page) {
-        throw new UnsupportedOperationException("Please implement");
+    public void commentsFrom(int page) {
+        this.driver.findElement(By.linkText(String.format("%s", page))).click();
+
     }
+//    public CommentsTable commentsFrom(int page) {
+//        this.driver.get(String.format("http://commentssprintone.azurewebsites.net/?page=%s", page));
+//    }
 
     public int commentsPagesSize() {
         throw new UnsupportedOperationException("Please implement");

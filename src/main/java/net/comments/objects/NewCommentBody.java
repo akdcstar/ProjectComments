@@ -3,7 +3,7 @@ package net.comments.objects;
 public interface NewCommentBody {
     void fillCommentText();
 
-    void fillNumber();
+    void fillNumber(String number);
 
     void activateComment();
 

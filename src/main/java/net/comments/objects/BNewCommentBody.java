@@ -15,9 +15,9 @@ public class BNewCommentBody implements NewCommentBody {
         this.driver.findElement(By.id("Text")).sendKeys("This is new comment");
     }
 
-    public void fillNumber() {
+    public void fillNumber(String number) {
         this.driver.findElement(By.id("Number")).clear();
-        this.driver.findElement(By.id("Number")).sendKeys("888");
+        this.driver.findElement(By.id("Number")).sendKeys(number);
     }
 
     public void activateComment() {

@@ -2,6 +2,7 @@ package net.comments.ft;
 
 import net.comments.objects.*;
 import net.comments.selenium.CommentsDriver;
+import org.hamcrest.MatcherAssert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,14 +26,13 @@ public class Test1 {
         commentsPage.open();
         commentsPage.newComment();
         newCommentBody.fillCommentText();
-        newCommentBody.fillNumber();
+        newCommentBody.fillNumber("888");
         newCommentBody.activateComment();
         newCommentBody.addCategory(1);
         newCommentAction.saveAndReturn();
+        commentsPage.commentsFrom(4);
 
-
-//        final String page = this.driver().getPageSource();
-//        MatcherAssert.assertThat("New comment is present", page.contains("Newly created comment 987"));
+        MatcherAssert.assertThat("New comment is present", commentsPage.currentComments().hasCommentWithId(888));
     }
 
     @BeforeMethod
