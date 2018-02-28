@@ -17,7 +17,6 @@ public class CommentsDriver implements WebDriver {
 
     public void define(WebDriver webDriver) {
         this.driver[0] = webDriver;
-
     }
 
     public void define() {

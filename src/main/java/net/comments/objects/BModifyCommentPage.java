@@ -3,16 +3,20 @@ package net.comments.objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class BNewCommentBody implements NewCommentBody {
+public class BModifyCommentPage implements ModifyCommentPage {
     private final WebDriver driver;
 
-    public BNewCommentBody(WebDriver webDriver) {
+    public BModifyCommentPage(WebDriver webDriver) {
         this.driver = webDriver;
     }
 
-    public void fillCommentText() {
+    public BModifyCommentActions modifyActions() {
+        return new BModifyCommentActions(driver);
+    }
+
+    public void fillCommentText(String text) {
         this.driver.findElement(By.id("Text")).clear();
-        this.driver.findElement(By.id("Text")).sendKeys("This is new comment");
+        this.driver.findElement(By.id("Text")).sendKeys(text);
     }
 
     public void fillNumber(String number) {

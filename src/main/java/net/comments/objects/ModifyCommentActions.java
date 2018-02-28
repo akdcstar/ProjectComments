@@ -1,6 +1,7 @@
 package net.comments.objects;
 
-public interface NewCommentActions {
+public interface ModifyCommentActions {
+
     void refresh();
 
     void save();

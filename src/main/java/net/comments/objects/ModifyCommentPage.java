@@ -1,7 +1,9 @@
 package net.comments.objects;
 
-public interface NewCommentBody {
-    void fillCommentText();
+public interface ModifyCommentPage {
+    BModifyCommentActions modifyActions();
+
+    void fillCommentText(String text);
 
     void fillNumber(String number);
 
