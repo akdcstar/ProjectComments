@@ -19,4 +19,13 @@ public class BCommentsTable implements CommentsTable {
             return false;
         }
     }
+
+    public boolean selectComment(String commentNumber) {
+        try {
+            driver.findElement(By.xpath(String.format("//*[@class = \"numbercolumn\" and text()= \"%s\"]/../td[1]", commentNumber))).click();
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
 }

@@ -8,17 +8,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Test1 {
-
     private final CommentsDriver driver = new CommentsDriver();
-
     private final CommentsPage commentsPage;
     private final ModifyCommentPage modifyCommentPage;
     private final ModifyCommentActions newCommentAction;
+
     public Test1() {
         this.commentsPage = new BCommentsPage(driver);
         this.modifyCommentPage = new BModifyCommentPage(driver);
         this.newCommentAction = new BModifyCommentActions(driver);
-
     }
 
     @Test
@@ -32,7 +30,6 @@ public class Test1 {
         modifyCommentPage.addCategory(1);
         modifyCommentPage.modifyActions().saveAndReturn();
         commentsPage.commentsFrom(4);
-
         MatcherAssert.assertThat("New comment is not present", commentsPage.currentComments().hasCommentWithId(Integer.parseInt(commentNumber)));
     }
 
@@ -45,6 +42,4 @@ public class Test1 {
     public void closeDriver() {
         this.driver.close();
     }
-
-
 }

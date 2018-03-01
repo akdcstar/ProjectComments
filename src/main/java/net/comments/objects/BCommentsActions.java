@@ -1,5 +1,6 @@
 package net.comments.objects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class BCommentsActions implements CommentsActions {
@@ -10,7 +11,7 @@ public class BCommentsActions implements CommentsActions {
     }
 
     public void duplicate() {
-        throw new UnsupportedOperationException("Please implement");
+        this.driver.findElement(By.xpath("//*[@class = \"buttonAsLink navigationButton\" and @value = \"Duplicate...\"]")).click();
     }
 
     public void edit() {

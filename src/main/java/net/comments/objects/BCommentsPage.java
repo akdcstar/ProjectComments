@@ -28,7 +28,6 @@ public class BCommentsPage implements CommentsPage {
 
     public void commentsFrom(int page) {
         this.driver.findElement(By.linkText(String.format("%s", page))).click();
-
     }
 
     public int commentsPagesSize() {
