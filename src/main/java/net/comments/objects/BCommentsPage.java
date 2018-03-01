@@ -26,7 +26,7 @@ public class BCommentsPage implements CommentsPage {
         return new BCommentsTable(driver);
     }
 
-    public void commentsFrom(int page) {
+    public void navigateToPage(int page) {
         this.driver.findElement(By.linkText(String.format("%s", page))).click();
     }
 

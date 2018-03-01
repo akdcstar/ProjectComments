@@ -9,7 +9,7 @@ public interface CommentsPage {
 
     CommentsTable currentComments();
 
-    void commentsFrom(int page);
+    void navigateToPage(int page);
 
     int commentsPagesSize();
 }

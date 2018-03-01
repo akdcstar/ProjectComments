@@ -29,7 +29,7 @@ public class Test1 {
         modifyCommentPage.activateComment();
         modifyCommentPage.addCategory(1);
         modifyCommentPage.modifyActions().saveAndReturn();
-        commentsPage.commentsFrom(4);
+        commentsPage.navigateToPage(4);
         MatcherAssert.assertThat("New comment is not present", commentsPage.currentComments().hasCommentWithId(Integer.parseInt(commentNumber)));
     }
 
