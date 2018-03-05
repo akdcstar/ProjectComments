@@ -10,6 +10,4 @@ public interface ModifyCommentPage {
     void activateComment();
 
     void addCategory(int categoryNumber);
-
-    boolean hasTextValidationError();
 }
