@@ -1,6 +1,7 @@
 package net.comments.objects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class BModifyCommentPage implements ModifyCommentPage {
@@ -33,5 +34,14 @@ public class BModifyCommentPage implements ModifyCommentPage {
     public void addCategory(int categoryNumber) {
         this.driver.findElements(By.id("Categories")).get(categoryNumber).click();
         this.driver.findElement(By.name("CurSelect")).click();
+    }
+
+    public boolean hasTextValidationError() {
+        try {
+            driver.findElement(By.id("errorfield"));
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 }
