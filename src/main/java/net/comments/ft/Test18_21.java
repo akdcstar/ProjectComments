@@ -10,12 +10,13 @@ import org.testng.annotations.Test;
 
 public class Test18_21 {
 
-    private final CommentsDriver driver = new CommentsDriver();
+    private final CommentsDriver driver;
     private final CommentsPage commentsPage;
     private final ModifyCommentPage modifyCommentPage;
     private final ModifyCommentActions newCommentAction;
 
     public Test18_21() {
+        this.driver = new CommentsDriver();
         this.commentsPage = new BCommentsPage(driver);
         this.modifyCommentPage = new BModifyCommentPage(driver);
         this.newCommentAction = new BModifyCommentActions(driver);
