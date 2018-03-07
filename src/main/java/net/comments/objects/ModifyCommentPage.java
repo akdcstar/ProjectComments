@@ -11,5 +11,11 @@ public interface ModifyCommentPage {
 
     void addCategory(int categoryNumber);
 
-    boolean hasTextValidationError();
+    boolean hasTextAlphanumericValidationError();
+
+    boolean hasTextMaxLengthValidationError();
+
+    boolean hasAnyTextValidationError();
+
+    boolean hasTextScriptValidationError();
 }

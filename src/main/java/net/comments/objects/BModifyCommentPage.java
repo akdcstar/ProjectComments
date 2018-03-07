@@ -36,12 +36,35 @@ public class BModifyCommentPage implements ModifyCommentPage {
         this.driver.findElement(By.name("CurSelect")).click();
     }
 
-    public boolean hasTextValidationError() {
+    public boolean hasTextAlphanumericValidationError() {
         try {
-            driver.findElement(By.id("errorfield"));
+            driver.findElement(By.xpath("//*[@id=\"errorfield\" and contains(text(), \"The Comment Text field should contain alphanumeric characters only\")]"));
             return true;
         } catch (NoSuchElementException e) {
             return false;
         }
     }
+
+    public boolean hasTextMaxLengthValidationError() {
+        try {
+            driver.findElement(By.xpath("//*[@id=\"errorfield\"]/*/*/span[contains(text(),\"The maximum length of Comment Text field is 50 characters\")]"));
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public boolean hasTextScriptValidationError() {
+        try {
+            driver.findElement(By.xpath("//*[@id=\"main\"]/h2[contains(text(),\"Sorry, an error occurred while processing your request.\")]"));
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public boolean hasAnyTextValidationError() {
+        return hasTextAlphanumericValidationError() || hasTextMaxLengthValidationError() || hasTextScriptValidationError();
+    }
 }
+

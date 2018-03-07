@@ -1,6 +1,9 @@
 package net.comments.ft;
 
-import net.comments.objects.*;
+import net.comments.objects.BCommentsPage;
+import net.comments.objects.BModifyCommentPage;
+import net.comments.objects.CommentsPage;
+import net.comments.objects.ModifyCommentPage;
 import net.comments.selenium.CommentsDriver;
 import org.hamcrest.MatcherAssert;
 import org.testng.annotations.AfterMethod;
@@ -9,16 +12,16 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class Test22_32 {
-
-    private final CommentsDriver driver = new CommentsDriver();
+    private final CommentsDriver driver;
     private final CommentsPage commentsPage;
     private final ModifyCommentPage modifyCommentPage;
-    private final ModifyCommentActions newCommentAction;
+//    private final ModifyCommentActions newCommentAction;
 
     public Test22_32() {
+        this.driver = new CommentsDriver();
         this.commentsPage = new BCommentsPage(driver);
         this.modifyCommentPage = new BModifyCommentPage(driver);
-        this.newCommentAction = new BModifyCommentActions(driver);
+//        this.newCommentAction = new BModifyCommentActions(driver);
     }
 
     @Test(dataProvider = "testData22_32")
@@ -30,7 +33,7 @@ public class Test22_32 {
         modifyCommentPage.activateComment();
         modifyCommentPage.addCategory(1);
         modifyCommentPage.modifyActions().saveAndReturn();
-        MatcherAssert.assertThat("New comment was saved", modifyCommentPage.hasTextValidationError());
+        MatcherAssert.assertThat("Validation error is not shown", modifyCommentPage.hasAnyTextValidationError());
     }
 
     @DataProvider
@@ -42,7 +45,6 @@ public class Test22_32 {
                 {"\"Ndsfsdfdfdsfgd \""},
                 {"<form action=\"http://commentssprintone.azurewebsites.net\"><input type=\"submit\"></form>"},
                 {"<input onclick=\"javascript:alert('xss');\">"},
-
         };
     }
 
