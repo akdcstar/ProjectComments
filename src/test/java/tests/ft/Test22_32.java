@@ -1,15 +1,15 @@
-package net.comments.ft;
+package tests.ft;
 
-import net.comments.objects.BCommentsPage;
-import net.comments.objects.BModifyCommentPage;
-import net.comments.objects.CommentsPage;
-import net.comments.objects.ModifyCommentPage;
-import net.comments.selenium.CommentsDriver;
 import org.hamcrest.MatcherAssert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import tests.objects.BCommentsPage;
+import tests.objects.BModifyCommentPage;
+import tests.objects.CommentsPage;
+import tests.objects.ModifyCommentPage;
+import tests.selenium.CommentsDriver;
 
 public class Test22_32 {
     private final CommentsDriver driver;
