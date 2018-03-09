@@ -5,21 +5,21 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import tests.objects.*;
+import tests.objects.BCommentsPage;
+import tests.objects.BModifyCommentPage;
+import tests.objects.CommentsPage;
+import tests.objects.ModifyCommentPage;
 import tests.selenium.CommentsDriver;
 
 public class Test18_21 {
-
     private final CommentsDriver driver;
     private final CommentsPage commentsPage;
     private final ModifyCommentPage modifyCommentPage;
-    private final ModifyCommentActions newCommentAction;
 
     public Test18_21() {
         this.driver = new CommentsDriver();
         this.commentsPage = new BCommentsPage(driver);
         this.modifyCommentPage = new BModifyCommentPage(driver);
-        this.newCommentAction = new BModifyCommentActions(driver);
     }
 
     @Test(dataProvider = "testData18_21")
