@@ -1,0 +1,9 @@
+{
+  "uuid": "7e7faa6d-d089-4197-919f-87c1ac5ff2a2",
+  "name": "tests.ft.Test2",
+  "start": 1520585750218,
+  "stop": 1520585798350,
+  "children": [
+    "dc95dd25-f5f5-421f-b4dd-cc4a2d2af201"
+  ]
+}

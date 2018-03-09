@@ -1,0 +1,51 @@
+{
+  "uuid": "3ea50e8e-0aa2-43bc-987d-5117ff5331ac",
+  "historyId": "a1d65fa9bd73eb32bc2bd8d775d28f03",
+  "fullName": "net.comments.sample.SubjectCookingTest.checkSubjectName",
+  "labels": [
+    {
+      "name": "package",
+      "value": "net.comments.sample.SubjectCookingTest"
+    },
+    {
+      "name": "testClass",
+      "value": "net.comments.sample.SubjectCookingTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "checkSubjectName"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "net.comments.sample.SubjectCookingTest"
+    },
+    {
+      "name": "host",
+      "value": "DP651"
+    },
+    {
+      "name": "thread",
+      "value": "16920@DP651.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "checkSubjectName",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1520592720399,
+  "stop": 1520592720411,
+  "parameters": []
+}

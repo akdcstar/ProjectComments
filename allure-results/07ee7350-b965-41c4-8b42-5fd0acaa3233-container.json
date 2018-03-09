@@ -1,0 +1,9 @@
+{
+  "uuid": "07ee7350-b965-41c4-8b42-5fd0acaa3233",
+  "name": "net.comments.sample.BadStudentTest",
+  "start": 1520585750218,
+  "stop": 1520585798340,
+  "children": [
+    "d76fa9f4-e914-473f-8eac-04a6db51318b"
+  ]
+}

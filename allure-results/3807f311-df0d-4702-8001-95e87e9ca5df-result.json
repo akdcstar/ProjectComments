@@ -1,0 +1,51 @@
+{
+  "uuid": "3807f311-df0d-4702-8001-95e87e9ca5df",
+  "historyId": "97f48b26df41b02f1484e92dde18f2c2",
+  "fullName": "net.comments.sample.LimitedRoomTest.testGetPersonInRoom",
+  "labels": [
+    {
+      "name": "package",
+      "value": "net.comments.sample.LimitedRoomTest"
+    },
+    {
+      "name": "testClass",
+      "value": "net.comments.sample.LimitedRoomTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "testGetPersonInRoom"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "net.comments.sample.LimitedRoomTest"
+    },
+    {
+      "name": "host",
+      "value": "DP651"
+    },
+    {
+      "name": "thread",
+      "value": "16920@DP651.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "testGetPersonInRoom",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1520592720367,
+  "stop": 1520592720375,
+  "parameters": []
+}

@@ -1,0 +1,51 @@
+{
+  "uuid": "8d486495-ba7c-49d1-a51d-afc27f5171b6",
+  "historyId": "f998fa5be1e3af6dfa358a5bd34c1957",
+  "fullName": "net.comments.sample.SubjectGitTest.checkSubjectName",
+  "labels": [
+    {
+      "name": "package",
+      "value": "net.comments.sample.SubjectGitTest"
+    },
+    {
+      "name": "testClass",
+      "value": "net.comments.sample.SubjectGitTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "checkSubjectName"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "net.comments.sample.SubjectGitTest"
+    },
+    {
+      "name": "host",
+      "value": "DP651"
+    },
+    {
+      "name": "thread",
+      "value": "5856@DP651.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "checkSubjectName",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1520585210262,
+  "stop": 1520585210263,
+  "parameters": []
+}

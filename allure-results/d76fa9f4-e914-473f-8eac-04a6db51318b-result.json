@@ -1,0 +1,51 @@
+{
+  "uuid": "d76fa9f4-e914-473f-8eac-04a6db51318b",
+  "historyId": "3a1e823041b5bce4b76bc7a24bebf2ed",
+  "fullName": "net.comments.sample.BadStudentTest.checkName",
+  "labels": [
+    {
+      "name": "package",
+      "value": "net.comments.sample.BadStudentTest"
+    },
+    {
+      "name": "testClass",
+      "value": "net.comments.sample.BadStudentTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "checkName"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "net.comments.sample.BadStudentTest"
+    },
+    {
+      "name": "host",
+      "value": "DP651"
+    },
+    {
+      "name": "thread",
+      "value": "12920@DP651.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "checkName",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1520585750434,
+  "stop": 1520585750435,
+  "parameters": []
+}

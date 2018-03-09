@@ -1,0 +1,56 @@
+{
+  "uuid": "d38a1e85-c497-48bb-8115-62d4860f1b3f",
+  "historyId": "9bb04770aeb3a72c518c51969f409da6",
+  "fullName": "tests.ft.Test18_21.test",
+  "labels": [
+    {
+      "name": "package",
+      "value": "tests.ft.Test18_21"
+    },
+    {
+      "name": "testClass",
+      "value": "tests.ft.Test18_21"
+    },
+    {
+      "name": "testMethod",
+      "value": "test"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "tests.ft.Test18_21"
+    },
+    {
+      "name": "host",
+      "value": "DP651"
+    },
+    {
+      "name": "thread",
+      "value": "5856@DP651.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "test",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1520585234389,
+  "stop": 1520585236836,
+  "parameters": [
+    {
+      "name": "arg0",
+      "value": "Новый комментарий с кириллическими символами"
+    }
+  ]
+}

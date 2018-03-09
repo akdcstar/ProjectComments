@@ -1,0 +1,56 @@
+{
+  "uuid": "2ffa8456-3b3e-4809-ab51-fbb647ecffd0",
+  "historyId": "12692f29a4ab816e3434b968911c2e7b",
+  "fullName": "tests.ft.Test18_21.test",
+  "labels": [
+    {
+      "name": "package",
+      "value": "tests.ft.Test18_21"
+    },
+    {
+      "name": "testClass",
+      "value": "tests.ft.Test18_21"
+    },
+    {
+      "name": "testMethod",
+      "value": "test"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "tests.ft.Test18_21"
+    },
+    {
+      "name": "host",
+      "value": "DP651"
+    },
+    {
+      "name": "thread",
+      "value": "5856@DP651.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "test",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1520585230000,
+  "stop": 1520585231991,
+  "parameters": [
+    {
+      "name": "arg0",
+      "value": "New comment with latin characters"
+    }
+  ]
+}

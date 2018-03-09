@@ -1,0 +1,51 @@
+{
+  "uuid": "806849ec-4bc4-404a-b67b-c8dbbff55859",
+  "historyId": "44ca4901874bbe1a8423f44fadf34a7f",
+  "fullName": "tests.ft.Test2.test",
+  "labels": [
+    {
+      "name": "package",
+      "value": "tests.ft.Test2"
+    },
+    {
+      "name": "testClass",
+      "value": "tests.ft.Test2"
+    },
+    {
+      "name": "testMethod",
+      "value": "test"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "tests.ft.Test2"
+    },
+    {
+      "name": "host",
+      "value": "DP651"
+    },
+    {
+      "name": "thread",
+      "value": "16920@DP651.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "test",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1520592758003,
+  "stop": 1520592759983,
+  "parameters": []
+}

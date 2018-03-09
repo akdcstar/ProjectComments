@@ -1,0 +1,20 @@
+{
+  "uuid": "24db4cb3-56a2-4d2a-ae53-619bc52d034a",
+  "name": "tests.ft.Test2.closeDriver",
+  "description": "",
+  "start": 1520592759985,
+  "stop": 1520592760220,
+  "children": [
+    "806849ec-4bc4-404a-b67b-c8dbbff55859"
+  ],
+  "afters": [
+    {
+      "name": "closeDriver",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "start": 1520592759985,
+      "stop": 1520592760220
+    }
+  ]
+}
