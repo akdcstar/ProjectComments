@@ -15,13 +15,11 @@ public class Test22_32 {
     private final CommentsDriver driver;
     private final CommentsPage commentsPage;
     private final ModifyCommentPage modifyCommentPage;
-//    private final ModifyCommentActions newCommentAction;
 
     public Test22_32() {
         this.driver = new CommentsDriver();
         this.commentsPage = new BCommentsPage(driver);
         this.modifyCommentPage = new BModifyCommentPage(driver);
-//        this.newCommentAction = new BModifyCommentActions(driver);
     }
 
     @Test(dataProvider = "testData22_32")
